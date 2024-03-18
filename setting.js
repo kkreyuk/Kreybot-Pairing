@@ -1,0 +1,99 @@
+const fs = require('fs')
+const chalk = require('chalk')
+
+//======== Social Media ==========//
+
+global.gr = 'https://chat.whatsapp.com/FDT8r0fCIKtG2ACLr1mqcH'
+global.ig = 'https://instagram/@' // ubah aja
+global.ofc = 'https://chat.whatsapp.com/FDT8r0fCIKtG2ACLr1mqcH'
+global.okta = 'https://taaofc-panel.my.id'
+global.gh = 'https://github.com/chataofc'
+global.saluran = 'https://chat.whatsapp.com/FDT8r0fCIKtG2ACLr1mqcH' //errReply
+global.email = '-@gmail.com' //serah
+global.region = 'indonesia' // serah
+global.dana = '-'
+global.gopay = '-'
+global.pulsa = '-'
+
+//======== Owner Name ==========//
+
+global.ownername = 'kreyuk' /*ubah jadi namamu!*/
+
+//============= Number ===============//
+
+global.owner = ['62895433590601'] // ubah jadi nomormu
+global.premium = ['62895433590601']
+
+//============= Apikey =================//
+
+global.apikey = ''
+
+//============== Name ===============//
+
+global.botname = '𝙆𝙍𝙀𝙔𝘽𝙊𝙏-𝙋𝘼𝙄𝙍𝙄𝙉𝙂' //ubah jadi nama bot mu, tanpa mengubah tanda `
+global.botname2 = 'KREYBOT-PAIRING'
+global.packname = 'krey' // ubah aja ini nama packname sticker
+global.ta = '•'
+global.author = 'kreyuk' // ubah aja ini nama author sticker
+global.prefa = ['','!','.',',','🐤','🗿']
+global.sessionName = 'session' //Saran gua gausah
+global.sp = '⭔' 
+global.wlcm = []
+global.wlcmm = []
+global.anticall = true
+
+//=============== Media ===============//
+
+global.thum = fs.readFileSync("./base/image/thum.jpeg") 
+global.good = fs.readFileSync("./base/image/good.jpeg") 
+global.vidmenu = fs.readFileSync("./base/video/zoro.mp4")
+
+//=========== Quick Message ===========//
+
+global.mess = {
+    done: '*Done Kak*',
+    admin: '*Fitur ini cuman buat Admin group*',
+    botAdmin: '*Command bisa digunakan ketika bot menjadi Admin*',
+    owner: '*Fitur ini hanya bisa digunakan oleh owner Bot*',
+    group: '*Fitur ini hanya dapat digunakan dalam group*',
+    private: '*Fitur ini cuman buat Admin grup*',
+    wait: 'Tunggu Sebentar⏳',
+    endLimit: '*Limitmu sudah habis, reset limit dimulai pukul 12 malam*',
+    error: '*Fitur sedang Error!!!*',
+    prem : '*Fitur ini hanya untuk member premium*'
+}
+//============= Limit ================//
+
+global.limitawal = {
+    premium: "Infinity",
+    free: 100
+}
+
+//============= RPG ================//
+
+global.buruan = {
+   ikan: 5,
+   ayam: 5,
+   kelinci: 5,
+   domba: 5,
+   sapi: 5,
+   gajah: 5
+}
+global.rpg = {
+   darahawal: 100,
+   besiawal: 5,
+   goldawal: 1,
+   emeraldawal: 1,
+   umpanawal: 1,
+   potionawal: 1
+}
+
+//========== Change Detect ===========//
+
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+	fs.unwatchFile(file)
+	console.log(chalk.redBright(`Update'${__filename}'`))
+	delete require.cache[file]
+	require(file)
+})
